@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.nav__listitem {
+  list-style: none;
+  position: relative;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.nav__listitemdrop {
+  position: absolute;
+  top: 4.1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 300ms ease-in-out;
+}
+
+.nav__listitem:hover .nav__listitemdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__listitemdrop li {
+  list-style: none;
+  padding: 0.5rem;
+  background-color: rgb(70, 192, 131);
+  transition: background-color 100ms ease-in-out;
+}
+
+.nav__listitemdrop li:hover {
+  background-color: rgb(109, 51, 185);
+  color: white
+}
